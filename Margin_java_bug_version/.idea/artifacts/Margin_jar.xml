@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Margin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Margin_jar</output-path>
+    <root id="archive" name="Margin.jar">
+      <element id="module-output" name="Margin" />
+    </root>
+  </artifact>
+</component>
