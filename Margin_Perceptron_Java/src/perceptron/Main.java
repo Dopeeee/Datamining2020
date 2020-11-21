@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class Main {
     public static void main(String args[]) throws IOException {
         FileReader fileRead = new FileReader();
-        System.out.println("请输入文件名");
+        //System.out.println("请输入文件名");
         String filename = args[0];
         HashMap<Integer, Point> hashMap = fileRead.readFile(filename);
 

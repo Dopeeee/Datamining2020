@@ -34,11 +34,21 @@ public class Perceptron {
     public int find(HashMap<Integer, Point> hashMap, W w,double gamma_guess){
 
         int index = -1;
-        for (int j = 0; j < hashMap.size(); j++) {
+        int breakPoint = (w.getIndex()==hashMap.size())?0:w.getIndex();
+        for (int j = breakPoint; j < hashMap.size(); j++) {
             Point p = hashMap.get(j);
             if ((Anwser(p, w) <= 0 || Distance(p, w) < gamma_guess / 2)) {
                 index = j;
                 break;
+            }
+        }
+        if(index == -1){
+            for (int j = 0; j < hashMap.size(); j++) {
+                Point p = hashMap.get(j);
+                if ((Anwser(p, w) <= 0 || Distance(p, w) < gamma_guess / 2)) {
+                    index = j;
+                    break;
+                }
             }
         }
         return index;
@@ -50,11 +60,13 @@ public class Perceptron {
                int violationIndex = find(hashMap,w,gamma_guess);
                if(violationIndex > -1){
                    Update(hashMap.get(violationIndex),w);
+                   w.setIndex(violationIndex+1);
+                   //System.out.println(violationIndex);
                    //System.out.println(w.toString());
                }
                else{
                    return false;
-               }
+              }
            }
            return true;
     }
@@ -63,12 +75,13 @@ public class Perceptron {
         Boolean flag = judege(hashMap, w, gamma_guess, R);
         if (flag) {
             Double gamma_new = UpdateGamma(gamma_guess);
-            System.out.println("The Gamma_guess change to :" + gamma_guess);
-            if(gamma_new<1){
-                System.out.println("结束");
-                System.out.println(gamma_guess);
-                return;
-            }
+            System.out.println("**********************************");
+            System.out.println("The Gamma_guess change to :" + gamma_new);
+//            if(gamma_new<0.1){
+//                System.out.println("结束");
+//                System.out.println(gamma_guess/2);
+//                return;
+//            }
             int dimension = hashMap.get(0).getPoints().length;
             double[] warray = new double[dimension];
             w.setW(warray);
@@ -76,7 +89,7 @@ public class Perceptron {
 
         }else{
             System.out.println("The final w is " + w.toString());
-            System.out.println("The final gamma_guess " + gamma_guess);
+            System.out.println("The final gamma_guess " + gamma_guess/2);
             evaluate(w, hashMap, gamma_guess);
 
         }
@@ -93,7 +106,7 @@ public class Perceptron {
     /*
     * 经过感知机分离后，错误率计算
      */
-    private void evaluate(W w, HashMap<Integer, Point> hashMap,double gamma_guess) {
+    private double evaluate(W w, HashMap<Integer, Point> hashMap,double gamma_guess) {
         int n = hashMap.size();
         //System.out.println(n);
         int count = 0;
@@ -106,6 +119,7 @@ public class Perceptron {
         }
         double result = new BigDecimal((float)count/ n).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         System.out.println("correct rate is:"+ result);
+        return result;
     }
 
     /*

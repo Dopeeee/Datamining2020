@@ -28,9 +28,6 @@ Requirement environment:
 
 ```
 jdk > 1.6
-Operation System: Window,Linux,Mac
+Operation System: Window,Linux
 ```
-
-
-对不住兄弟们，还有些bug,我尽快改掉
 
