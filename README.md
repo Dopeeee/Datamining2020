@@ -5,7 +5,37 @@ The group project of CMSC5724 2020fall
 
 - [Deliverable Works](#deliverable-works)
 - [Team Members](#team-members)
+- [Contribution](#contribution)
 
 ## Deliverable Works
+Works our group did in this project:
+
+1. [Margin Perceptron python](https://github.com/Dopeeee/Datamining2020/tree/main/Margin%20Perceptron%20Python) for doing margin perceptron in python version.
+2. [Margin Perceptron java](https://github.com/Dopeeee/Datamining2020/tree/main/Margin_Perceptron_Java) for doing margin perceptron in java version.
+3. [Decision Tree](https://github.com/Dopeeee/Datamining2020/tree/main/Decision%20Tree%20Python) for doing decision tree in python.
+4. [Linearly-Separable Data generator](https://github.com/Dopeeee/Datamining2020/tree/main/data) for generate linearly separable dataset for Margin Perceptron.
 
 ## Team Members
+
+> ​	[@Sun Pengliang](https://github.com/sunpengliang)  1155148009
+> 
+> ​	[@Yang Zekun](https://github.com/Dopeeee)          1155145496
+> 
+> ​	[@Liu Jiarong](https://github.com/laukawing)      1155148282
+>
+
+## Contribution
+
+All the group members all equally participate in   
+
+1: Margin perceptron (Both java and python version)
+* Function Write
+* Algorithm Implement
+* Data Generate
+* Test  
+
+2: Decision Tree
+* Function Write
+* Decision Tree Generate
+* Test Data Evaluate
+* Write Report
