@@ -162,9 +162,9 @@ def Break_perceptron(points_list):
     global r_guess
     termi_time = cal_terminate_time(points_list,r_guess)
     print('Now we have {} times violation'.format(violation_times) )
-    # 超过终止次数
+    # violation times > 12R^2 / r^2
     if(termi_time < violation_times):
-        # 初始化，重新进行下一轮
+        # Initiate，Next round
         is_finish_stage1 = False
         is_finish_stage2 = False
         r_guess = r_guess / 2
@@ -173,6 +173,11 @@ def Break_perceptron(points_list):
         print('Violation times exceed limits，r_guess = r_guess/2')
     else:
         pass
+    # Threshold
+    if(r_guess < 0.0000001):
+        print('r_guess is too small, this dataset might be linearly non-separable')
+        is_finish_stage1 = True
+        is_finish_stage2 = True
 
 if __name__ == '__main__':
     points_list = read_data(dataset)
