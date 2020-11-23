@@ -77,11 +77,11 @@ public class Perceptron {
             Double gamma_new = UpdateGamma(gamma_guess);
             System.out.println("**********************************");
             System.out.println("The Gamma_guess change to :" + gamma_new);
-//            if(gamma_new<0.1){
-//                System.out.println("结束");
-//                System.out.println(gamma_guess/2);
-//                return;
-//            }
+            if(gamma_new<1e-8){
+                //System.out.println("结束");
+                System.out.println(“none separable");
+                return;
+            }
             int dimension = hashMap.get(0).getPoints().length;
             double[] warray = new double[dimension];
             w.setW(warray);
