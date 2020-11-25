@@ -14,10 +14,21 @@ The group project of CMSC5724 2020fall
 ### How to run the code:
 
 ```sh
-等待被补充
+python3 decision_tree.py
 ```
   
-Result: This program will return xxx等待被补充
+### Result: 
+The program will return the following in the console:
+```sh
+Loaded training set successfully.
+Now building the decision tree.
+Decision tree built with training set.
+Loaded test set successfully.
+Doing classification on the test set.
+```
+
+The decision tree will be printed and saved in this folder with the file `tree.txt`
+The classification result on the test set will be saved in the file `classification_result.txt`
   
 Note: 
 
@@ -32,7 +43,11 @@ adult.test: Evaluation Set.
 
 ## Data Preprocessing
 
-According the requirements of this course, we remove all the records containing '?' . Also, we remove the attribute "native-country".
+According the requirements of the project, we have preprocessed the dataset in the following steps:
+- remove all the records containing '?'
+- remove the attribute "native-country"
+- for the labels, we convert '>50K' to 1, while '<=50K' to -1
+- rounding-off column `fnlwgt` and column `capital gain` to simplify these contiunous data
 
 ### What's More:
 
