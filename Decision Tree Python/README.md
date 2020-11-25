@@ -11,15 +11,15 @@ The group project of CMSC5724 2020fall
 - [Contributors](#contributors)
 
 ## Usage
-### How to run the code:
+### How to run the code
 
 ```sh
-python3 decision_tree.py
+$ python3 decision_tree.py
 ```
   
-### Result: 
-The program will return the following in the console:
-```sh
+### Result:
+The program will return the following logs in the console:
+```
 Loaded training set successfully.
 Now building the decision tree.
 Decision tree built with training set.
@@ -27,19 +27,23 @@ Loaded test set successfully.
 Doing classification on the test set.
 ```
 
-The decision tree will be printed and saved in this folder with the file `tree.txt`
-The classification result on the test set will be saved in the file `classification_result.txt`
-  
-Note: 
+The decision tree will be printed and saved in this folder with the file `tree.txt`.
+
+The classification result on the test set will be saved in the file `classification_result.txt`.
+
+For the report on test set, please refer to the `test_set_report.csv`, in which column `predicted` shows the result predicted by our decision tree, column `probabilities` shows the probabilities with two classes on this current leaf node, and column `correct` shows whether this row has been classified correctly. Note that `-1` represents income `<=50K`, while `1` represents income `>50K`.
+
+### Accuracy
+With the decision tree built from the training set, the evaluation result shows that 11983 rows has been classified correctly, while 3077 rows has not. The final accuracy on the test set is 79.568%.
 
   
 ## Dataset
 
 ### [Adult Dataset](http://archive.ics.uci.edu/ml/datasets/Adult)
   
-adult.data: Trainning Set.
+`adult.csv`: Trainning Set.
   
-adult.test: Evaluation Set.
+`adult_test.csv`: Evaluation Set.
 
 ## Data Preprocessing
 

@@ -29,13 +29,13 @@ Works our group did in this project:
 All the group members all equally participate in   
 
 1: Margin perceptron (Both java and python version)
-* Function Write
-* Algorithm Implement
-* Data Generate
-* Test  
+* Function Writing
+* Algorithm Implementation
+* Data Generating
+* Testing
 
 2: Decision Tree
-* Function Write
-* Decision Tree Generate
-* Test Data Evaluate
-* Write Report
+* Function Writing
+* Decision Tree Building
+* Evaluation on Test Data
+* Export Report
