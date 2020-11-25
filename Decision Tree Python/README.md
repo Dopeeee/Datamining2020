@@ -17,7 +17,7 @@ The group project of CMSC5724 2020fall
 $ python3 decision_tree.py
 ```
   
-### Result:
+### Result
 The program will return the following logs in the console:
 ```
 Loaded training set successfully.
