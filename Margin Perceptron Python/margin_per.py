@@ -10,7 +10,7 @@ dataset = args.dataset
 num_point = 0
 num_dim = 0
 
-
+#read the data
 def read_data(dataset):
     f_tmp = open(dataset, "r")
     data_format = f_tmp.readline()
