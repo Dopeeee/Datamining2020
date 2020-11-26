@@ -17,6 +17,8 @@ Works our group did in this project:
 
 ## Team Members
 
+All the group members equally participate in this course project.  
+
 > ​	[@Sun Pengliang](https://github.com/sunpengliang)  1155148009
 > 
 > ​	[@Yang Zekun](https://github.com/Dopeeee)          1155145496
@@ -26,9 +28,9 @@ Works our group did in this project:
 
 ## Contribution
 
-All the group members all equally participate in   
+All the group members equally participate in   
 
-1: Margin perceptron (Both java and python version)
+1: Margin perceptron (Both java and python versions)
 * Function Writing
 * Algorithm Implementation
 * Data Generating
