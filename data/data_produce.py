@@ -1,7 +1,13 @@
 import numpy as np
 import random 
+import argparse
 
-d = 9
+parser = argparse.ArgumentParser(description='Input the dimension to generate the file')
+parser.add_argument('--dimension', '-d', help='the data dimension', type=int, required=True)
+
+args = parser.parse_args()
+
+d = args.dimension
 N = 10000
 w = np.ones(d)
 data = np.empty(shape = (N,d+1),dtype = int)
@@ -26,8 +32,9 @@ for i in range(N):
         temp[:] = temp[:] + 10
         label = 1
     data[i] = np.append(temp, label)
+filename = "d" + str(d) + ".txt"
 
-with open("test.txt","w") as f:
+with open(filename,"w") as f:
     f.write(str(N)) 
     f.write(' ')
     f.write(str(d)) 
