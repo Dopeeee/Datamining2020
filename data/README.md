@@ -23,8 +23,8 @@ Result: This program will return a test.txt file with 10000 linearly separable p
 
 ## Requirement
 ```
-python
-Operation System: Window,Linux
+python=3.x
+Operation System: Window,Linux,Mac
 ```
 
 ## Contributors
