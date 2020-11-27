@@ -42,7 +42,7 @@ Perceptron.java (Margin perceptron algorithm)
   
 ## Requirement
 ```
-jdk > 1.6
+jdk >= 1.6
 Operation System: Window,Linux
 ```
   
