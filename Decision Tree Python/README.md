@@ -36,7 +36,7 @@ We Place these 2 files in /output folder.
 For the report on test set, please refer to the `test_set_report.csv`, in which column `predicted` shows the result predicted by our decision tree, column `probabilities` shows the probabilities with two classes on this current leaf node, and column `correct` shows whether this row has been classified correctly. Note that `-1` represents income `<=50K`, while `1` represents income `>50K`.
 
 ### Accuracy
-With the decision tree built from the training set, the evaluation result shows that 11983 rows has been classified correctly, while 3077 rows has not. The final accuracy on the test set is 79.568%.
+With the decision tree built from the training set, the evaluation result shows that 11983 rows has been classified correctly, while 3077 rows has not. The final accuracy on the test set is **79.568%**.
 
   
 ## Dataset
@@ -60,7 +60,7 @@ According the requirements of the project, we have preprocessed the dataset in t
 ## Structure 
   
 ```
-- decision_tree.py (Main Programme)
+- decision_tree.py (Main Programme, final submission)
 
 - Decision Tree V1.ipynb (The Jupyter Notebook version of Main programme)
 
@@ -73,11 +73,13 @@ According the requirements of the project, we have preprocessed the dataset in t
 
 #### When building decision trees of "Nominal Features" 
 We try 2 different ways: 
-- Decision Tree V1.ipynb:  We combine every possible combinations , but this is too huge to calculate the GINI of every combination .For example, the occupation column contains 14 kinds of domain, it has 2^13 combanations in total. We achieve this kind of methods in [Decision Tree V1.ipynb](). When set max depth to 1( only separate the whole dataset once ) takes us 10 mins. So we design another version.
+- Decision Tree V1.ipynb:  We combine every possible combinations for each decision node, but this is too huge to calculate the GINI of every combination. For example, the occupation column contains 14 kinds of domain, it has 2^13 combanations in total. We achieve this kind of methods in [Decision Tree V1.ipynb](). When set max depth to 1 (only separate the whole dataset once) takes us 10 mins. So we design another version.
 
-- Decision Tree V2.ipynb: We research the way how the Scikit-learn design decision tree, and we decide to only consider the one domain at a time(Eg: Set1:Occupation equals to 'Salesman' .Set2: Otherwise ) .
+- Decision Tree V2.ipynb: We research the way how the Scikit-learn design decision tree, and we decide to only consider the one domain at a time (Eg: left-branch: Occupation equals to 'Salesman'. right-branch: Otherwise).
 
 We implement both 2 versions and we use version 2 to finish our course project. 
+
+Codes in Jupyter Notebooks contain validation and analysis with Pandas and Scikit-learn. For the final submission, please refer to the `decision_tree.py`.
   
 ## Requirement
 
